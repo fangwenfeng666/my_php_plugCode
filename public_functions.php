@@ -1,3 +1,4 @@
+<?php
 function is_function($argument){
 	return isset($argument) && is_callable($argument);
 }
@@ -1050,6 +1051,7 @@ function echos($str,$type = 1,$default = ''){
         echo $type == 1 ? htmlspecialchars($default) : $default;
     }
 }
+
 if(!function_exists('in_array1')){
     /**
      * 检测某个值是否存在 某个数组中
@@ -1069,6 +1071,7 @@ if(!function_exists('in_array1')){
         return false;
     }
 }
+
 if(!function_exists('field_array')){
     /**
      * 获取二维数组里的某个字段的列值（一维数组）
@@ -1086,6 +1089,7 @@ if(!function_exists('field_array')){
         }
     }
 }
+
 if(!function_exists('reconfig_array')){
     /**
      * @param array $array_level2  二维数组及多维数组
@@ -1207,8 +1211,7 @@ function my_get_data($str = '', $cut_str_leval1 = ',', $cut_str_leval2 = '=')
  * @param string $cut_str_leval2
  * @return bool|string
  */
-function my_set_data($data = '', $cut_str_leval1 = ',', $cut_str_leval2 = '=')
-{
+function my_set_data($data = '', $cut_str_leval1 = ',', $cut_str_leval2 = '='){
     if(is_array($data) || is_object($data)){
         $str = '';
         foreach ($data as $key => $value) {
@@ -1219,4 +1222,3 @@ function my_set_data($data = '', $cut_str_leval1 = ',', $cut_str_leval2 = '=')
     }
     return false;
 }
-     
